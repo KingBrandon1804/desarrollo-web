@@ -29,7 +29,7 @@ const validarCampo = (expresion, input, campo) => {
     }
     else{
         document.getElementById(`${campo}`).classList.add('is-invalid');
-        document.getElementById(`${campo}`).classList.remove('is-ivalid');
+        document.getElementById(`${campo}`).classList.remove('is-valid');
         campos[campo] = false;
     }
 }
@@ -74,9 +74,9 @@ const validarFormulario = (e) => {
                 document.getElementById('inputImagen').classList.add('is-valid');
              
             } else {
-                document.getElementById('inputImagen').classList.remove('is-valid');
-                document.getElementById('inputImagen').classList.add('is-invalid');
-                
+                document.getElementById(`${campo}`).classList.add('is-invalid');
+                document.getElementById(`${campo}`).classList.remove('is-ivalid');
+                campos[campo] = false;
             }
          break; 
     }
